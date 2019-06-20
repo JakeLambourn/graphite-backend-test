@@ -11,16 +11,18 @@ class Admin extends Controller
     public function add(Request $request)
     {
         //this code is self explanatory
+        // Update, spelling mistakes fixed
         if ($request->isMethod("post")) {
-            $datta = $request->only(['title', 'content', 'published']);
-            $datta['published'] = ($datta['published'] ?? '') == 'on';
-            $arrticul = new Article($datta);
-            $arrticul->title = $datta['title'];
-            $arrticul->content = $datta['content'];
-            $arrticul->publishd = !!$datta['published'];
-            $arrticul->save();
+            $data = $request->only(['title', 'content', 'published']);
+            $data['published'] = ($data['published'] ?? '') == 'on';
+            $article = new Article($data);
+            $article->title = $data['title'];
+            $article->content = $data['content'];
+            $article->published = !!$data['published'];
+            $article->save();
             return redirect()->route('home');
         }
+
         return view('admin.add_article');
     }
 }

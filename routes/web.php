@@ -14,4 +14,6 @@
 Route::get('/', 'Articles@index')->name('home');
 Route::any('/admin/add', 'Admin\Admin@add')->name('admin_add')->middleware('auth');;
 
+Route::get('articles/{article}', 'Articles@view')->name('article');
+
 Auth::routes();

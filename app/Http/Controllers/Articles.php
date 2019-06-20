@@ -22,7 +22,7 @@ class Articles extends Controller
     public function index()
     {
         // Load published articles
-        $articles = Article::where('published', true)->get();
+        $articles = Article::where('published', true)->limit(10)->get();
 
         return view('index', ['articles' => $articles]);
     }
@@ -39,6 +39,15 @@ class Articles extends Controller
     {
         // TODO View single article, 404 if not present
 
-        return view('article');
+        //return view('article');
+
+        $article = Article::where('id', $id)->first();
+
+        if($article) {
+            return view('view')->with(compact('article'));
+        } else {
+            return view('404');
+        }
+
     }
 }

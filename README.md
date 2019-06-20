@@ -28,18 +28,18 @@ Please spend no longer than 3 hours on this test.
 
 ### Known bugs to fix
 
-1. Finish the single-article view method to show the full article on its own
-2. Article listing currently shows whole article content; truncate it to a suitable length and include a link to single-article view
-3. Article listing shows escaped HTML, not unescaped HTML. Fix this and ensure similar is done for single-article view
-4. There's a missing database column. Add this with a suitable migration
+1. Finish the single-article view method to show the full article on its own - DONE
+2. Article listing currently shows whole article content; truncate it to a suitable length and include a link to single-article view - DONE
+3. Article listing shows escaped HTML, not unescaped HTML. Fix this and ensure similar is done for single-article view - NO ISSUE FOUND
+4. There's a missing database column. Add this with a suitable migration - DONE
 
 There may be other bugs/oddities that you encounter; please resolve as you deem appropriate and note accordingly in your response back to Graphite.
 
 ### Features to add
 
-1. Article listing - restrict to latest 10 items
+1. Article listing - restrict to latest 10 items - DONE
 2. Add a `promoted` property to the Article model, and ensure promoted articles are shown first, with some kind of visual highlight to indicate their promoted status
-3. Add the signed-in user's email address/username to the top of the page
+3. Add the signed-in user's email address/username to the top of the page - DONE
 4. Add Google reCAPTCHA to the login page, using configuration for site/secret keys as appropriate
 
 ## Notes

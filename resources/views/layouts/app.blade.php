@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Graphite Backend test - @yield('title')</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .card {
+                margin:15px!important;
+            }
+
+        </style>
     </head>
     <body>
         <div class="container">
@@ -17,6 +23,7 @@
                 </ul>
                 <ul class="navbar-nav mr-0">
                     @auth
+                        <li class="nav-item"><a class="nav-link">{{ Auth::user()->name }}</a></li>
                         <li class="nav-item">
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link">
                                 Logout
